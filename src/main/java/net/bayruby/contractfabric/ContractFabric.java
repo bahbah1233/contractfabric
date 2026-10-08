@@ -10,6 +10,8 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.DefaultAttributes;
 import net.bayruby.contractfabric.entity.PlayerLikeNPC;
 import net.bayruby.contractfabric.item.MerchantContractItem;
 import org.slf4j.Logger;
@@ -41,8 +43,10 @@ public class ContractFabric implements ModInitializer {
 		MERCHANT_CONTRACT = Registry.register(
 			BuiltInRegistries.ITEM,
 			id("merchant_contract"),
-			new MerchantContractItem(new Item.Properties().maxStackSize(1))
+			new MerchantContractItem(new Item.Properties())
 		);
+		
+		LOGGER.info("Contract Fabric initialized successfully!");
 	}
 
 	public static ResourceLocation id(String path) {

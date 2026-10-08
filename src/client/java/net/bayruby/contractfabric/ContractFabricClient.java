@@ -7,6 +7,15 @@ import net.bayruby.contractfabric.client.PlayerLikeNPCRenderer;
 public class ContractFabricClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
-		EntityRendererRegistry.register(ContractFabric.PLAYER_LIKE_NPC, PlayerLikeNPCRenderer::new);
+		ContractFabric.LOGGER.info("Initializing Contract Fabric Client!");
+		try {
+			EntityRendererRegistry.register(
+				ContractFabric.PLAYER_LIKE_NPC,
+				PlayerLikeNPCRenderer::new
+			);
+			ContractFabric.LOGGER.info("Entity renderer registered successfully!");
+		} catch (Exception e) {
+			ContractFabric.LOGGER.error("Failed to register entity renderer", e);
+		}
 	}
 }

@@ -12,8 +12,6 @@ public class PlayerLikeNPC extends Mob {
         super(type, level);
         this.setNoGravity(true);
         this.setInvulnerable(true);
-        this.setCustomName(Component.literal("Merchant"));
-        this.setCustomNameVisible(true);
     }
 
     public static AttributeSupplier.Builder createAttributes() {
@@ -36,5 +34,10 @@ public class PlayerLikeNPC extends Mob {
     @Override
     public boolean isPushable() {
         return false;
+    }
+
+    @Override
+    protected void tickDeath() {
+        // Prevent death animation
     }
 }
