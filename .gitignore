@@ -1,0 +1,29 @@
+# gradle
+.gradle/
+build/
+
+# maven
+target/
+
+# IntelliJ
+*.iws
+*.iml
+*.ipr
+out/
+
+# Eclipse
+.settings/
+.classpath
+.project
+bin/
+
+# macOS
+.DS_Store
+
+# misc
+*.sw[op]
+*.class
+*.log
+
+# linux
+.directory

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "contractfabric",
+  "version": "${version}",
+  "name": "Contract Fabric",
+  "description": "A Fabric port of contractnpc - Create merchant NPCs with contracts",
+  "authors": [
+    "bayruby"
+  ],
+  "contact": {
+    "homepage": "https://github.com/bahbah1233/contractfabric",
+    "sources": "https://github.com/bahbah1233/contractfabric"
+  },
+  "license": "All Rights Reserved",
+  "icon": "assets/contractfabric/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.bayruby.contractfabric.ContractFabric"
+    ],
+    "client": [
+      "net.bayruby.contractfabric.ContractFabricClient"
+    ]
+  },
+  "mixins": [],
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
